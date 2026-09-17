@@ -1,8 +1,7 @@
 package lab999;
 
-public class RRR {
-
+public class TTT {
     public static void main(String[] args) {
-        System.out.println("Fuck Java");
+        System.out.println("Hi");
     }
 }
