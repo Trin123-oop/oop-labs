@@ -1,5 +1,4 @@
-package lab1;
-
+package lab1.Question2;
 
 public class Employee {
     private String firstName;
@@ -28,7 +27,6 @@ public class Employee {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-    
     public String getLastName() {
         return lastName;
     }
