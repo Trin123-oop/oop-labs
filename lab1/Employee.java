@@ -1,25 +1,21 @@
-package lab1.Question2;
+package lab1;
 
 public class Employee {
     private String firstName;
     private String lastName;
     private double monthlySalary;
 
+    public Employee(String firstName, String lastName) {
+        this(firstName, lastName, 0.0);
+    }
+
     public Employee(String firstName, String lastName, double monthlySalary) {
         this.firstName = firstName;
         this.lastName = lastName;
-
-        if (monthlySalary > 0) {
-            this.monthlySalary = monthlySalary;
-        } else {
-            this.monthlySalary = 0;
-        }
+        setMonthlySalary(monthlySalary); 
     }
 
-    public Employee(String firstName, String lastName) {
-        this(firstName, lastName, 0);
-    }
-
+    // 5. Getters and Setters
     public String getFirstName() {
         return firstName;
     }
@@ -27,6 +23,7 @@ public class Employee {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
     public String getLastName() {
         return lastName;
     }
@@ -49,9 +46,9 @@ public class Employee {
         return monthlySalary * 12;
     }
 
-    public void giveRaise(double percent) {
-        if (percent > 0) {
-            monthlySalary = monthlySalary + (monthlySalary * percent / 100);
+    public void giveRaise(double percentage) {
+        if (percentage > 0) {
+            monthlySalary += monthlySalary * (percentage / 100);
         }
     }
 }
